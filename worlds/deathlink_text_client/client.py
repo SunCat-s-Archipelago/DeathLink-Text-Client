@@ -31,10 +31,10 @@ class DeathLinkTextContext(CommonContext):
         killer = data.get("source", "")
         cause = data.get("cause", "")
         if killer and cause:
-            logger.info(f"DeathLink: Killed by {killer}, because of \"{cause}\"")
+            logger.info(f"DeathLink: Killed by {killer}, \"{cause}\"")
         else:
             if cause:
-                logger.info(f"DeathLink: Killed because of \"{cause}\"")
+                logger.info(f"DeathLink: Killed, \"{cause}\"")
             else:
                 if killer:
                     logger.info(f"DeathLink: Killed by {killer}")
